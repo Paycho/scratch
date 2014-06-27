@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="myquiz.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="myquiz.js"></script>
+    <title>My Quiz</title>
+</head>
+<body>
+<form METHOD=POST>
+    <table>
+        <tr>
+            <td>Question</td>
+            <td>1
+                <br>Doesn't describe me; never do this</td>
+            <td>2
+                <br>Slighty describes me; sometimes do this</td>
+            <td>3</td>
+            <td>4
+                <br>Describes me fairly well; often do this</td>
+            <td>5
+                <br>Strongly describes me; always do this</td>
+        </tr>
+        <tr>
+            <td>I address others' needs and concerns</td>
+            <td>
+                <input TYPE="radio" NAME="a" id="quiz" value="0">
+            </td>
+            <td>
+                <input TYPE="radio" NAME="a" id="quiz" value="1">
+            </td>
+            <td>
+                <input TYPE="radio" NAME="a" id="quiz" value="2">
+            </td>
+            <td>
+                <input TYPE="radio" NAME="a" id="quiz" value="3">
+            </td>
+            <td>
+                <input TYPE="radio" NAME="a" id="quiz" value="4">
+            </td>
+        </tr>
+        <tr>
+            <td>I appeal to shared benefits, presenting reasons and evidence that are compelling to others.</td>
+            <td>
+                <input TYPE="radio" NAME="b" id="quiz2" value="0">
+            </td>
+            <td>
+                <input TYPE="radio" NAME="b" id="quiz2" value="1">
+            </td>
+            <td>
+                <input TYPE="radio" NAME="b" id="quiz2" value="2">
+            </td>
+            <td>
+                <input TYPE="radio" NAME="b" id="quiz2" value="3">
+            </td>
+            <td>
+                <input TYPE="radio" NAME="b" id="quiz2" value="4">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <input TYPE="button" VALUE="Compute Score!" id="submit">
+    <br>
+    <br>
+</form>
+<p id="result"></p>
+</body>
+</html>
