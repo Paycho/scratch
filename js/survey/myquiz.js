@@ -1,16 +1,22 @@
-window.onload=init;
-
-function init() {
-    document.getElementByID("submit").onClick=function(){storeIt(form);};
-}
-
+$(document).ready(function() {
+    $("#submit").click(
+        function() {
+            storeIt($('input[name=a]:checked', '#survey').val(),
+                $('input[name=b]:checked', '#survey').val());
+        }
+    );
+});
     
-function storeIt(form) {
-
-    for (counter = 0; counter < 10; counter++)
-    var testarray = document.getElementById("quiz").value;
-    var testarray2 = testarray + document.getElementById("quiz2").value;
-    document.getElementById("result").innerHTML = (testarray + testarray2);
+function storeIt(firstAnswer, secondAnswer) {
+    var firstText = "";
+    var secondText = "";
+    if (firstAnswer != null) {
+        firstText = $("#survey tr:first").find("td").eq(++firstAnswer).text();
+    }
+    if (secondAnswer != null) {
+        secondText = $("#survey tr:first").find("td").eq(++secondAnswer).text();
+    }
+    $("#result").html(firstText + "<br>" + secondText);
 }
 
 function test_it(entry) {
@@ -35,3 +41,4 @@ function computeForm(form) {
         }
 
     }
+}
