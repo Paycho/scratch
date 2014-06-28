@@ -8,15 +8,8 @@ $(document).ready(function() {
 });
     
 function storeIt(firstAnswer, secondAnswer) {
-    var firstText = "";
-    var secondText = "";
-    if (firstAnswer != null) {
-        firstText = $("#survey tr:first").find("td").eq(++firstAnswer).text();
-    }
-    if (secondAnswer != null) {
-        secondText = $("#survey tr:first").find("td").eq(++secondAnswer).text();
-    }
-    $("#result").html(firstText + "<br>" + secondText);
+
+    $("#result").html(++firstAnswer + "<br>" + ++secondAnswer);
 }
 
 function test_it(entry) {
