@@ -14,24 +14,24 @@ function storeIt(firstAnswer, secondAnswer) {
 }
 
 function test_it(entry) {
-    if (entry.value != null && entry.value.length != 0) {
-        entry.value = "" + eval(entry.value);
+    if (entry.value !== null && entry.value.length !== 0) {
+        entry.value = entry.value.toString();
     }
     computeForm(entry.form);
 }
 
 function computeForm(form) {
-    var total = 0
+    var total = 0;
 
     for (var count = 0; count < 5; count++) {
         if (form.a[count].checked) {
-            var total = total + parseInt(form.a[count].value);
+            total = total + parseInt(form.a[count].value);
         }
     }
 
-    for (var count = 0; count < 5; count++) {
+    for (count = 0; count < 5; count++) {
         if (form.b[count].checked) {
-            var total = total + parseInt(form.b[count].value);
+            total = total + parseInt(form.b[count].value);
         }
 
     }
