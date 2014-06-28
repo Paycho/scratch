@@ -8,8 +8,9 @@ $(document).ready(function() {
 });
     
 function storeIt(firstAnswer, secondAnswer) {
-
-    $("#result").html(++firstAnswer + "<br>" + ++secondAnswer);
+    ++firstAnswer;
+    ++secondAnswer;
+    $("#result").html(firstAnswer + "<br>" + secondAnswer);
 }
 
 function test_it(entry) {
